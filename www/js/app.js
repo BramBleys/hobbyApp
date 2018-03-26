@@ -138,8 +138,8 @@ $(function () {
     $(".vorige").click(function () {
         let type = $(this).data('type');
 
-        if (type === "muziekCollection") {
-            $("#muziekCollection").html("");
+        if (type === "gitaar") {
+            $("#muziekCollectionGitaar").empty();
 
             if (hoogste !== lengte) {
                 if (laagste < stap) {
@@ -155,16 +155,14 @@ $(function () {
             }
 
             Muziek.toonLiedjes(laagste, hoogste);
-        } else {
-
         }
     });
 
     $(".volgende").click(function () {
         let type = $(this).data('type');
 
-        if (type === "muziekCollection") {
-            $("#muziekCollection").empty();
+        if (type === "gitaar") {
+            $("#muziekCollectionGitaar").empty();
 
             let liedjes = JSON.parse(localStorage.getItem('liedjes'));
             let lengteLiedjes = 0;
@@ -191,10 +189,7 @@ $(function () {
             }
 
             Muziek.toonLiedjes(laagste, hoogste);
-        } else {
-
         }
-
     });
 
     $(".submitKnop").click(function () {
@@ -208,16 +203,14 @@ $(function () {
 
         if (titel !== "" && artiest !== "") {
             if (link === "") {
-                link = "leeg";
+                link = "#";
             }
             Muziek.voegLiedjeToe(titel, artiest, link, instrument, categorie);
-            $("#popupFormulier").modal("close");
+            $("#popupFormulier").modal("close").find("input[type=text]").val("");
         } else {
             event.preventDefault();
             $(this).siblings("#alert").addClass("revealed");
         }
-
-        //TODO all velden nog terug leeg maken
     });
 });
 

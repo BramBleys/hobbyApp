@@ -15,8 +15,9 @@ let Muziek = function () {
     function toonliedjes(laagste, hoogste, categorie) {
         for (let i = laagste; i < hoogste; i++) {
             if (i < json.length) {
-                $("#muziekCollection").append(
-                    '<li class="collection-item"><a class="link" href="' + json[i].link + '">' + json[i].titel + ' - ' + json[i].artiest + '</a></li>'
+                $("#muziekCollectionGitaar").append(
+                    '<li class="collection-item"><a class="link" href="' + json[i].link + '">' + json[i].titel + ' - ' + json[i].artiest
+                    + '</a><a class="secondary-content">' + json[i].categorie + '</a>' + '</li>'
                 );
             } else {
                 updateLijst();
@@ -35,8 +36,9 @@ let Muziek = function () {
         $("li").remove(".localStorage");
 
         for (let i = 0; i < getLiedjes.length; i++) {
-            $("#muziekCollection").append(
-                '<li class="collection-item localStorage">' + getLiedjes[i].titel + ' - ' + getLiedjes[i].artiest + '</li>'
+            $("#muziekCollectionGitaar").append(
+                '<li class="collection-item localStorage"><a class="link" href="' + getLiedjes[i].link + '">' + getLiedjes[i].titel + ' - ' + getLiedjes[i].artiest
+                + '</a><a class="secondary-content">' + getLiedjes[i].categorie + '</a>' + '</li>'
             );
         }
     }

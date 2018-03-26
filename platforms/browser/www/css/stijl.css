@@ -1,4 +1,5 @@
 /*TODO Ander lettertype*/
+/*TODO check of er dingen zijn die niet meer gebruikt worden*/
 .kleur{
     background-color: #18CDCA;    
 }
@@ -40,9 +41,9 @@ h5{
     margin-right: 10px;
 }
 
-/*TODO kleur werkt nog niet vgm*/
-label:focus{
-    color: #18CDCA;
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #18CDCA;
+    box-shadow: 0 1px 0 0 #18CDCA;
 }
 
 #popupFormulier{
@@ -77,4 +78,7 @@ select{
 .link{
     text-decoration: none;
     color: #000;
+}
+.secondary-content{
+    color: #18CDCA;
 }
