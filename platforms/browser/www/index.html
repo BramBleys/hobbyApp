@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/stijl.css">
+    <title>Hobby App</title>
+</head>
+<body>
+
+    <!--Header-->
+    <div class="navbar-fixed">
+        <nav class="kleur">
+            <div class="nav-wrapper container"><a href="#!" class="brand-logo center">Hobby's</a>
+                <a href="#!" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--Sidebar-->
+    <ul id="nav-mobile" class="side-nav">
+        <li><a href="#!" data-show="tabFitness"><i class="material-icons flip">fitness_center</i>
+            Fitness</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li id="keuzelijst" class="">
+                    <a class="collapsible-header padding"><i class="material-icons">queue_music</i>
+                        Muziek<i class="material-icons rechts" id="pijl">keyboard_arrow_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!" data-show="tabGitaar">Gitaar</a></li>
+                            <li><a href="#!" data-show="tabPiano">Piano</a></li>
+                            <li><a href="#!" data-show="tabDrum">Drum</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#!" data-show="tabContact"><i class="material-icons">sentiment_very_satisfied</i>
+            Contact</a></li>
+        <li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#!" data-show="tabApp"><i class="material-icons">info_outline</i>
+            Over de app</a></li>
+        <li>
+    </ul>
+
+    <!--Content-->
+    <div class="container">
+        <div class="row spa" id="tabFitness">
+            <div class="col s12">
+                <h4>Fitness</h4>
+                <ul class="collapsible" data-collapsible="accordion" id="fitnessAccordion"></ul>
+            </div>
+            <div class="col s12">
+                <h4>Stappen teller</h4>
+                <div>
+                    <button id="startStappenteller" class="btn waves-effect waves-light col s3">Start</button>
+                    <button id="stopStappenteller" class="btn waves-effect waves-light col s3">Stop</button>
+                    <div style="clear: both"></div>
+                    <h5 class="marginTop">Stappen: <span id="stappen"></span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row spa" id="tabGitaar">
+            <div class="col s12">
+                <h4 style="float:left">Gitaar</h4>
+                <a style="float:right" class="waves-effect waves-light btn modal-trigger col s4 marginTop" href="#popupFormulier">
+                    <i class="material-icons">add</i></a>
+                <div style="clear: both"></div>
+                <div id="popupFormulier" class="modal popupFormulier">
+                    <div class="modal-content">
+                        <h5>Nieuw liedje toevoegen</h5>
+                        <form id="nieuwLiedjeFormulier">
+                            <div class="input-field">
+                                <input placeholder="Titel" id="titel" type="text" name="titel">
+                                <label for="titel">Titel</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input placeholder="Artiest" id="artiest" type="text" name="artiest">
+                                <label for="artiest">Artiest</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input placeholder="Link (optioneel)" id="link" type="text" name="link">
+                                <label for="link">Link</label>
+                            </div>
+
+                            <label for="categorieSelect">Categorie</label>
+                            <select id="categorieSelect" class="browser-default">
+                                <option value="spelen">Spelen</option>
+                                <option value="leren">Nog leren</option>
+                            </select>
+
+                            <label for="instrumentSelect">Instrument</label>
+                            <select id="instrumentSelect" class="browser-default">
+                                <option value="gitaar">Gitaar</option>
+                                <option value="piano">Piano</option>
+                                <option value="Drum">Drum</option>
+                            </select>
+
+                            <button type="submit" class="btn waves-effect waves-light submitKnop">
+                                Opslaan
+                                <i class="material-icons right">send</i>
+                            </button>
+
+                            <div id="alert" class="alert alert-danger alert-dismissable hidden">Vul minstens een titel
+                                en artiest in!
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <h5>Spelen</h5>
+
+                <ul class="collection" id="muziekCollection"></ul>
+
+                <button class="btn waves-effect waves-light vorige" data-type="muziekCollection">
+                    <i class="material-icons">chevron_left</i>
+                </button>
+                <button class="btn waves-effect waves-light volgende" data-type="muziekCollection">
+                    <i class="material-icons">chevron_right</i>
+                </button>
+
+                <h5>Nog leren</h5>
+                
+                <ul class="collection" id="muziekCollectionLeren"></ul>
+
+                <button class="btn waves-effect waves-light vorige" data-type="muziekCollectionLeren">
+                    <i class="material-icons">chevron_left</i>
+                </button>
+                <button class="btn waves-effect waves-light volgende" data-type="muziekCollectionLeren">
+                    <i class="material-icons">chevron_right</i>
+                </button>
+            </div>
+        </div>
+        <div class="row spa" id="tabPiano">
+            <div class="col s12">
+                <h4>Piano</h4>
+            </div>
+        </div>
+        <div class="row spa" id="tabDrum">
+            <div class="col s12">
+                <h4>Drum</h4>
+            </div>
+        </div>
+        <div class="row spa" id="tabContact">
+            <div class="col s12">
+                <h4>Contact</h4>
+                <table class="bordered">
+                    <tr>
+                        <td>Naam:</td>
+                        <td>Bram Bleys</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><a href="mailto: b.bleys@hotmail.com">b.bleys@hotmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>GSM:</td>
+                        <td>0478 73 02 72
+                            <a href="sms: +32478730272"><span class="gsmNummer">SMS</span></a><a href="tel: +32478730272"><span class="gsmNummer">Bel</span></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row spa" id="tabApp">
+            <div class="col s12">
+                <h4>Over de app</h4>
+                <p>Deze app kan ik gebruiken voor mijn hobby's. <br><br>
+                    Als ik ga fitnessen kan ik makkelijk zien welke oefeningen ik doe per spiergroep, en hoeveel gewicht
+                    ik vorige keer had. Als ik zwaarder kan gaan dan kan ik dit aanpassen. De nieuwe gegevens zullen
+                    opslaan bij het verlaten van de app.
+                    <br><br>
+                    Als ik thuis met mijn instrumenten bezig ben dan kan ik door deze app terug wat inspiratie opdoen.
+                    Ik kan per instrument kijken welke liedjes ik kan spelen. Hierbij krijg ik soms ook een link naar
+                    een YouTube filmpje zodat ik mee kan spelen met het liedje. Ook kan ik zien welke liedjes ik nog wil
+                    leren spelen.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/fitness.js"></script>
+    <script src="js/muziek.js"></script>
+    <script defer src="js/app.js"></script>
+</body>
+</html>

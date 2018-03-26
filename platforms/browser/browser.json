@@ -1,0 +1,32 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "be.thomasmore.HobbyApp"
+    },
+    "cordova-plugin-pedometer": {
+      "PACKAGE_NAME": "be.thomasmore.HobbyApp"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-pedometer/www/pedometer.js",
+      "id": "cordova-plugin-pedometer.Pedometer",
+      "pluginId": "cordova-plugin-pedometer",
+      "clobbers": [
+        "pedometer"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-pedometer": "0.4.1"
+  }
+}

@@ -1,0 +1,80 @@
+/*TODO Ander lettertype*/
+.kleur{
+    background-color: #18CDCA;    
+}
+.brand-logo{
+    color: #000;
+}
+a.collapsible-header.padding{
+    padding-left: 32px;
+}
+.rechts{
+    position: absolute;
+    right: 5px;
+}
+.flip{
+    transform: rotate(90deg);
+}
+h4{
+    margin: 20px 0px 20px 0px;
+}
+h5{
+    margin-bottom: 20px;
+}
+.gsmNummer{
+    margin-left: 10px;
+}
+
+.btn{
+    background-color: #18CDCA;
+}
+.btn:hover{
+    background-color: #18CDCA;
+}
+
+.marginTop{
+    margin-top: 20px;
+}
+
+#startStappenteller{
+    margin-right: 10px;
+}
+
+/*TODO kleur werkt nog niet vgm*/
+label:focus{
+    color: #18CDCA;
+}
+
+#popupFormulier{
+    height: 100%;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px;
+}
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.hidden{
+    display: none;
+}
+.revealed{
+    display: block;
+}
+
+select{
+    margin-bottom: 10px;
+}
+.link{
+    text-decoration: none;
+    color: #000;
+}

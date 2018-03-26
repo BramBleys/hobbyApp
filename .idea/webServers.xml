@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d845eb7f-669f-4418-a38a-120d027cddea" name="sinners" url="http://sinners.be">
+        <fileTransfer host="sinners.be" port="22" rootFolder="/home/users/b/brambleys/public_html/api/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
