@@ -1,10 +1,25 @@
 let Muziek = function () {
     let liedjes = [];
 
-    let json = [];
+    let jsonGitaar = [];
+    let jsonPiano = [];
+    let jsonDrum = [];
+    let tellerGitaar = 0;
+    let tellerPiano = 0;
+    let tellerDrum = 0;
+
     $.getJSON('http://brambleys.sinners.be/api/muziek.php', function (data) {
         $.each(data, function (i) {
-            json[i] = data[i];
+            if (data[i].instrument === "gitaar") {
+                jsonGitaar[tellerGitaar] = data[i];
+                tellerGitaar++;
+            } else if (data[i].instrument === "piano") {
+                jsonPiano[tellerPiano] = data[i];
+                tellerPiano++;
+            } else {
+                jsonDrum[tellerDrum] = data[i];
+                tellerDrum++;
+            }
         });
     });
 
@@ -12,12 +27,30 @@ let Muziek = function () {
         toonliedjes(laagste, hoogste);
     }
 
-    function toonliedjes(laagste, hoogste, categorie) {
+    function toonliedjes(laagste, hoogste) {
         for (let i = laagste; i < hoogste; i++) {
-            if (i < json.length) {
+            if (i < jsonGitaar.length) {
                 $("#muziekCollectionGitaar").append(
-                    '<li class="collection-item"><a class="link" href="' + json[i].link + '">' + json[i].titel + ' - ' + json[i].artiest
-                    + '</a><a class="secondary-content">' + json[i].categorie + '</a>' + '</li>'
+                    '<li class="collection-item"><a class="link" href="' + jsonGitaar[i].link + '">' + jsonGitaar[i].titel + ' - ' + jsonGitaar[i].artiest
+                    + '</a><a class="secondary-content">' + jsonGitaar[i].categorie + '</a>' + '</li>'
+                );
+            } else {
+                updateLijst();
+            }
+
+            if (i < jsonPiano.length) {
+                $("#muziekCollectionPiano").append(
+                    '<li class="collection-item"><a class="link" href="' + jsonPiano[i].link + '">' + jsonPiano[i].titel + ' - ' + jsonPiano[i].artiest
+                    + '</a><a class="secondary-content">' + jsonPiano[i].categorie + '</a>' + '</li>'
+                );
+            } else {
+                updateLijst();
+            }
+
+            if (i < jsonDrum.length) {
+                $("#muziekCollectionDrum").append(
+                    '<li class="collection-item"><a class="link" href="' + jsonDrum[i].link + '">' + jsonDrum[i].titel + ' - ' + jsonDrum[i].artiest
+                    + '</a><a class="secondary-content">' + jsonDrum[i].categorie + '</a>' + '</li>'
                 );
             } else {
                 updateLijst();
@@ -35,11 +68,25 @@ let Muziek = function () {
         let getLiedjes = JSON.parse(localStorage.getItem('liedjes'));
         $("li").remove(".localStorage");
 
-        for (let i = 0; i < getLiedjes.length; i++) {
-            $("#muziekCollectionGitaar").append(
-                '<li class="collection-item localStorage"><a class="link" href="' + getLiedjes[i].link + '">' + getLiedjes[i].titel + ' - ' + getLiedjes[i].artiest
-                + '</a><a class="secondary-content">' + getLiedjes[i].categorie + '</a>' + '</li>'
-            );
+        if (getLiedjes !== null) {
+            for (let i = 0; i < getLiedjes.length; i++) {
+                if (getLiedjes[i].instrument === "gitaar") {
+                    $("#muziekCollectionGitaar").append(
+                        '<li class="collection-item localStorage"><a class="link" href="' + getLiedjes[i].link + '">' + getLiedjes[i].titel + ' - ' + getLiedjes[i].artiest
+                        + '</a><a class="secondary-content">' + getLiedjes[i].categorie + '</a>' + '</li>'
+                    );
+                } else if (getLiedjes[i].instrument === "piano") {
+                    $("#muziekCollectionPiano").append(
+                        '<li class="collection-item localStorage"><a class="link" href="' + getLiedjes[i].link + '">' + getLiedjes[i].titel + ' - ' + getLiedjes[i].artiest
+                        + '</a><a class="secondary-content">' + getLiedjes[i].categorie + '</a>' + '</li>'
+                    );
+                } else {
+                    $("#muziekCollectionDrum").append(
+                        '<li class="collection-item localStorage"><a class="link" href="' + getLiedjes[i].link + '">' + getLiedjes[i].titel + ' - ' + getLiedjes[i].artiest
+                        + '</a><a class="secondary-content">' + getLiedjes[i].categorie + '</a>' + '</li>'
+                    );
+                }
+            }
         }
     }
 

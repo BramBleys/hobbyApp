@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="dd3d9a9e-f0f9-4a53-a4a1-e53507eda4ae" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/stijl.css" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/stijl.css" />
       <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" />
       <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/app.js" />
       <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/muziek.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/muziek.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/css/stijl.css" afterPath="$PROJECT_DIR$/platforms/browser/www/css/stijl.css" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/app.js" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/muziek.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/muziek.js" />
-      <change beforePath="$PROJECT_DIR$/www/css/stijl.css" afterPath="$PROJECT_DIR$/www/css/stijl.css" />
       <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
       <change beforePath="$PROJECT_DIR$/www/js/muziek.js" afterPath="$PROJECT_DIR$/www/js/muziek.js" />
@@ -40,23 +37,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="143" column="49" lean-forward="false" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+            <state relative-caret-position="652">
+              <caret line="168" column="85" lean-forward="false" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="muziek.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="muziek.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/muziek.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+            <state relative-caret-position="1246">
+              <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
               <folding>
-                <marker date="1522064035890" expanded="true" signature="2891:2897" ph="{&quot;init&quot;: init...}" />
+                <marker date="1522066844769" expanded="true" signature="5223:5229" ph="{&quot;init&quot;: init...}" />
               </folding>
             </state>
           </provider>
@@ -65,18 +62,8 @@
       <file leaf-file-name="stijl.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/stijl.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <state relative-caret-position="567">
+              <caret line="71" column="15" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -105,6 +92,8 @@
       <find>toonLiedjes</find>
       <find>muziekCollection</find>
       <find>leeg</find>
+      <find>toon</find>
+      <find>localStorage</find>
     </findStrings>
     <replaceStrings>
       <replace>json</replace>
@@ -131,10 +120,10 @@
         <option value="$PROJECT_DIR$/www/updateMuziek.php" />
         <option value="$PROJECT_DIR$/www/insertMuziek.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/www/js/muziek.js" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/css/stijl.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/muziek.js" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
       </list>
     </option>
   </component>
@@ -347,7 +336,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110386000" />
+    <option name="totallyTimeSpent" value="112937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,6 +737,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="168" column="85" lean-forward="false" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="167" column="10" lean-forward="false" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/fitness.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -759,44 +771,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/stijl.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+        <state relative-caret-position="567">
+          <caret line="71" column="15" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/muziek.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        <state relative-caret-position="1246">
+          <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
           <folding>
-            <marker date="1522064035890" expanded="true" signature="2891:2897" ph="{&quot;init&quot;: init...}" />
+            <marker date="1522066844769" expanded="true" signature="5223:5229" ph="{&quot;init&quot;: init...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="143" column="49" lean-forward="false" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -140,56 +140,65 @@ $(function () {
 
         if (type === "gitaar") {
             $("#muziekCollectionGitaar").empty();
-
-            if (hoogste !== lengte) {
-                if (laagste < stap) {
-                    laagste = 0;
-                    hoogste = stap;
-                } else {
-                    laagste -= stap;
-                    hoogste -= stap;
-                }
-            } else {
-                hoogste = laagste;
-                laagste -= stap;
-            }
-
-            Muziek.toonLiedjes(laagste, hoogste);
+        } else if (type === "piano") {
+            $("#muziekCollectionPiano").empty();
+        } else {
+            $("#muziekCollectionDrum").empty();
         }
+
+        if (hoogste !== lengte) {
+            if (laagste < stap) {
+                laagste = 0;
+                hoogste = stap;
+            } else {
+                laagste -= stap;
+                hoogste -= stap;
+            }
+        } else {
+            hoogste = laagste;
+            laagste -= stap;
+        }
+
+        Muziek.toonLiedjes(laagste, hoogste);
     });
 
     $(".volgende").click(function () {
         let type = $(this).data('type');
 
+        //TODO hier klopt nog iets niet met pagination
         if (type === "gitaar") {
             $("#muziekCollectionGitaar").empty();
+        } else if (type === "piano") {
+            $("#muziekCollectionPiano").empty();
+        } else{
+            $("#muziekCollectionDrum").empty();
+        }
 
-            let liedjes = JSON.parse(localStorage.getItem('liedjes'));
-            let lengteLiedjes = 0;
+        let liedjes = JSON.parse(localStorage.getItem('liedjes'));
+        let lengteLiedjes = 0;
 
-            if (liedjes !== null) {
-                lengteLiedjes = liedjes.length;
+        if (liedjes !== null) {
+            lengteLiedjes = liedjes.length;
+        }
+
+        let lengteMuziek = jsonMuziek.length;
+        lengte = lengteLiedjes + lengteMuziek;
+        verschil = lengte % stap;
+
+        if ((hoogste + stap) > lengte) {
+            hoogste = lengte;
+            if ((laagste + stap) > lengte) {
+                laagste = lengte - verschil;
             }
-
-            let lengteMuziek = jsonMuziek.length;
-            lengte = lengteLiedjes + lengteMuziek;
-            verschil = lengte % stap;
-
-            if ((hoogste + stap) > lengte) {
-                hoogste = lengte;
-                if ((laagste + stap) > lengte) {
-                    laagste = lengte - verschil;
-                }
-                else {
-                    laagste += stap;
-                }
-            } else {
-                hoogste += stap;
+            else {
                 laagste += stap;
             }
-
-            Muziek.toonLiedjes(laagste, hoogste);
+        } else {
+            hoogste += stap;
+            laagste += stap;
         }
+
+        Muziek.toonLiedjes(laagste, hoogste);
     });
 
     $(".submitKnop").click(function () {
@@ -216,7 +225,6 @@ $(function () {
 
 function onDeviceReady() {
     document.addEventListener("pause", onPause, false);
-    document.addEventListener("resume", onResume, false);
     Fitness.init();
     Muziek.init(laagste, hoogste);
 }
@@ -224,8 +232,4 @@ function onDeviceReady() {
 function onPause() {
     Muziek.slaGegevensOp();
     localStorage.clear();
-}
-
-function onResume() {
-
 }
