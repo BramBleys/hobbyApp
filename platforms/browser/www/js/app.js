@@ -1,3 +1,4 @@
+//TODO optimaliseer code, controleer op for loop -> each en else if -> case?
 let jsonFitness = [];
 let jsonMuziek = [];
 
