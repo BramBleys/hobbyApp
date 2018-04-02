@@ -1,5 +1,3 @@
-//TODO optimaliseer code, controleer op for loop -> each en else if -> case?
-let jsonFitness = [];
 let jsonMuziek = [];
 
 let laagste = 0;
@@ -23,10 +21,6 @@ $(function () {
 
     $.getJSON('http://brambleys.sinners.be/api/fitness.php', function (data) {
         $.each(data, function (i) {
-            jsonFitness[i] = data[i];
-        });
-
-        $.each(data, function (i) {
             if (data[i].meerdereTypes === "1") {
                 types[data[i].oefeningNaam] = [data[i].type1, data[i].type2];
                 gewichten[data[i].oefeningNaam] = [data[i].gewicht1, data[i].gewicht2];
@@ -42,6 +36,8 @@ $(function () {
 
     $('.modal').modal();
 
+
+    //NAVIGATIE
     $('.button-collapse').sideNav();
 
     $('.side-nav a[data-show]').click(function () {
@@ -77,13 +73,17 @@ $(function () {
     function isActief() {
         let klasse = $("#keuzelijst").attr("class");
 
-        if (klasse === "active") {
+        /* if (klasse === "active") {
             return true;
-        } else {
+           } else {
             return false;
-        }
+           }
+        */
+
+        return klasse === "active";
     }
 
+    //DEEL FITNESS
     $("ul").on("click", "#type1", function () {
         let oefening = $(this).siblings("#oefeningNaam").html();
         let type = $(this).html();
@@ -136,17 +136,8 @@ $(function () {
         pedometer.stopPedometerUpdates();
     });
 
+    //DEEL MUZIEK
     $(".vorige").click(function () {
-        let type = $(this).data('type');
-
-        if (type === "gitaar") {
-            $("#muziekCollectionGitaar").empty();
-        } else if (type === "piano") {
-            $("#muziekCollectionPiano").empty();
-        } else {
-            $("#muziekCollectionDrum").empty();
-        }
-
         if (hoogste !== lengte) {
             if (laagste < stap) {
                 laagste = 0;
@@ -160,21 +151,21 @@ $(function () {
             laagste -= stap;
         }
 
-        Muziek.toonLiedjes(laagste, hoogste);
+        let type = $(this).data('type');
+
+        if (type === "gitaar") {
+            $("#muziekCollectionGitaar").empty();
+            Muziek.toonLiedjes(laagste, hoogste, "gitaar");
+        } else if (type === "piano") {
+            $("#muziekCollectionPiano").empty();
+            Muziek.toonLiedjes(laagste, hoogste, "piano");
+        } else {
+            $("#muziekCollectionDrum").empty();
+            Muziek.toonLiedjes(laagste, hoogste, "drum");
+        }
     });
 
     $(".volgende").click(function () {
-        let type = $(this).data('type');
-
-        //TODO hier klopt nog iets niet met pagination
-        if (type === "gitaar") {
-            $("#muziekCollectionGitaar").empty();
-        } else if (type === "piano") {
-            $("#muziekCollectionPiano").empty();
-        } else{
-            $("#muziekCollectionDrum").empty();
-        }
-
         let liedjes = JSON.parse(localStorage.getItem('liedjes'));
         let lengteLiedjes = 0;
 
@@ -199,7 +190,18 @@ $(function () {
             laagste += stap;
         }
 
-        Muziek.toonLiedjes(laagste, hoogste);
+        let type = $(this).data('type');
+
+        if (type === "gitaar") {
+            $("#muziekCollectionGitaar").empty();
+            Muziek.toonLiedjes(laagste, hoogste, "gitaar");
+        } else if (type === "piano") {
+            $("#muziekCollectionPiano").empty();
+            Muziek.toonLiedjes(laagste, hoogste, "piano");
+        } else {
+            $("#muziekCollectionDrum").empty();
+            Muziek.toonLiedjes(laagste, hoogste, "drum");
+        }
     });
 
     $(".submitKnop").click(function () {
