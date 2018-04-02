@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd3d9a9e-f0f9-4a53-a4a1-e53507eda4ae" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/fitness.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/fitness.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/muziek.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/muziek.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/fitness.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/fitness.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/muziek.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/muziek.js" />
-      <change beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change beforePath="$PROJECT_DIR$/www/js/fitness.js" afterPath="$PROJECT_DIR$/www/js/fitness.js" />
       <change beforePath="$PROJECT_DIR$/www/js/muziek.js" afterPath="$PROJECT_DIR$/www/js/muziek.js" />
     </list>
@@ -37,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="134" column="75" lean-forward="false" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
+            <state relative-caret-position="3162">
+              <caret line="225" column="57" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,10 +44,10 @@
       <file leaf-file-name="muziek.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/muziek.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="113" column="33" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+            <state relative-caret-position="519">
+              <caret line="115" column="5" lean-forward="false" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
               <folding>
-                <marker date="1522669900913" expanded="true" signature="5434:5440" ph="{&quot;init&quot;: init...}" />
+                <marker date="1522670617617" expanded="true" signature="5434:5440" ph="{&quot;init&quot;: init...}" />
               </folding>
             </state>
           </provider>
@@ -69,14 +63,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fitness.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fitness.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/fitness.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="771">
+              <caret line="107" column="4" lean-forward="false" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
               <folding>
-                <marker date="1522669985237" expanded="true" signature="861:874" ph="..." />
-                <marker date="1522669985237" expanded="true" signature="939:952" ph="..." />
+                <marker date="1522670676655" expanded="true" signature="861:874" ph="..." />
+                <marker date="1522670676655" expanded="true" signature="939:952" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,9 +128,9 @@
         <option value="$PROJECT_DIR$/www/updateMuziek.php" />
         <option value="$PROJECT_DIR$/www/insertMuziek.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/css/stijl.css" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/muziek.js" />
         <option value="$PROJECT_DIR$/www/js/fitness.js" />
       </list>
@@ -346,12 +340,12 @@
       <workItem from="1521995180966" duration="5566000" />
       <workItem from="1522053698528" duration="2440000" />
       <workItem from="1522056174873" duration="136000" />
-      <workItem from="1522663016302" duration="7043000" />
+      <workItem from="1522663016302" duration="7653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120597000" />
+    <option name="totallyTimeSpent" value="121207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,14 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="220" column="81" lean-forward="false" selection-start-line="220" selection-start-column="81" selection-end-line="220" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/updatedb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -760,14 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="134" column="75" lean-forward="false" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/stijl.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -776,24 +754,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/muziek.js">
+    <entry file="file://$PROJECT_DIR$/www/js/fitness.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="33" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+        <state relative-caret-position="771">
+          <caret line="107" column="4" lean-forward="false" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
           <folding>
-            <marker date="1522669900913" expanded="true" signature="5434:5440" ph="{&quot;init&quot;: init...}" />
+            <marker date="1522670676655" expanded="true" signature="861:874" ph="..." />
+            <marker date="1522670676655" expanded="true" signature="939:952" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/fitness.js">
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="482">
+          <caret line="220" column="81" lean-forward="false" selection-start-line="220" selection-start-column="81" selection-end-line="220" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/muziek.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="115" column="5" lean-forward="false" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
           <folding>
-            <marker date="1522669985237" expanded="true" signature="861:874" ph="..." />
-            <marker date="1522669985237" expanded="true" signature="939:952" ph="..." />
+            <marker date="1522670617617" expanded="true" signature="5434:5440" ph="{&quot;init&quot;: init...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="225" column="57" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

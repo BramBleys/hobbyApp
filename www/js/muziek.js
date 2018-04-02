@@ -22,12 +22,6 @@ let Muziek = function () {
         });
     });
 
-    function init(laagste, hoogste) {
-        toonliedjes(laagste, hoogste, "gitaar");
-        toonliedjes(laagste, hoogste, "piano");
-        toonliedjes(laagste, hoogste, "drum");
-    }
-
     function toonliedjes(laagste, hoogste, instrument) {
         for (let i = laagste; i < hoogste; i++) {
             if (instrument === "gitaar") {
@@ -119,6 +113,12 @@ let Muziek = function () {
             }
         }
         liedjes = [];
+    }
+
+    function init(laagste, hoogste) {
+        toonliedjes(laagste, hoogste, "gitaar");
+        toonliedjes(laagste, hoogste, "piano");
+        toonliedjes(laagste, hoogste, "drum");
     }
 
     return {

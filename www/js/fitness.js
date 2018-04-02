@@ -79,6 +79,7 @@ let Fitness = function () {
                 }
             }
         });
+
         updateDatabase(oefening, type, gewicht, welkGewicht);
         $("#fitnessAccordion").empty();
         init();
